@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist ; tsc && ncc build dist/index.js -o dist && git add -A && git commit -a -m 'change' && git pull --rebase && git push"
+    "build": "rm -rf dist ; tsc && ncc build dist/index.js -o dist && git add -A && git commit -a -m 'change' && git pull --rebase && git push && git tag -a v1.0.0 -m '' && git push origin v1.0.0"
+
+    
+                                    
   },
   "dependencies": {
     "@actions/artifact": "^5.0.1",
