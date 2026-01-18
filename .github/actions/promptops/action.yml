@@ -1,0 +1,10 @@
+name: "PromptOps Action"
+description: "Executes a PromptOps workflow task"
+author: "Softensify Pty Ltd"
+runs:
+  using: "node20"
+  main: "dist/index.js"
+inputs:
+  task:
+    description: 'Task payload (JSON)'
+    required: false

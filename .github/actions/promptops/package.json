@@ -1,0 +1,23 @@
+{
+  "name": "promptops-action",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist ; tsc && ncc build dist/index.js -o dist && git add -A && git commit -a -m 'change' && git pull --rebase && git push"
+  },
+  "dependencies": {
+    "@actions/artifact": "^5.0.1",
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^5.1.1",
+    "crypto": "^1.0.1",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-sealedbox-js": "^1.2.0",
+    "tweetnacl-util": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@vercel/ncc": "^0.38.4",
+    "bun": "^1.3.5",
+    "typescript": "^5.2.2"
+  }
+}
